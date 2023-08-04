@@ -42,6 +42,21 @@
       "name": "Adam Walker",
       "phone": "+154875454",
       "id": 4
+    },
+    {
+      "name": "Rihanna",
+      "phone": "6545645454",
+      "id": 5
+    },
+    {
+      "name": "Elon Musk",
+      "phone": "+154658758574",
+      "id": 6
+    },
+    {
+      "name": "Sia",
+      "phone": "+37477808080",
+      "id": 7
     }
   ]
 }
