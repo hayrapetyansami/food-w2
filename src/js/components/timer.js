@@ -1,4 +1,4 @@
-function timerModule() {
+function timerModule(timerInit) {
 	function getTimeRemaining(endtime) {
 		const total = Date.parse(endtime) - Date.parse(new Date());
 		let days, hours, minutes, seconds;
@@ -52,7 +52,8 @@ function timerModule() {
 		}
 	}
 
-	setClock(".timer", "2023-07-17 22:00:00");
+	setClock(".timer", timerInit);
 }
 
-module.exports = timerModule;
+// module.exports = timerModule;
+export default timerModule;

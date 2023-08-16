@@ -1,6 +1,6 @@
-const spinner = require("./spinner");
+import spinner from "./spinner";
 
-function formsModule () {
+function formsModule() {
 	const forms = document.querySelectorAll("form");
 	const messages = {
 		loading: spinner,
@@ -114,4 +114,5 @@ function formsModule () {
 	}
 }
 
-module.exports = formsModule;
+// module.exports = formsModule;
+export default formsModule;
