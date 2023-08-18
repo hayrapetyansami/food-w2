@@ -1,4 +1,5 @@
 import spinner from "./spinner";
+import { openModal, closeModal } from "./modal";
 
 function formsModule() {
 	const forms = document.querySelectorAll("form");
@@ -92,7 +93,7 @@ function formsModule() {
 	function messagesModal(message) {
 		const prevModalDialog = document.querySelector(".modal__dialog");
 		prevModalDialog.classList.add("hide");
-		openModal();
+		openModal(document.querySelector(".modal"));
 
 		const messageModal = document.createElement("div");
 		messageModal.classList.add("modal__dialog");
@@ -109,7 +110,7 @@ function formsModule() {
 			messageModal.remove();
 			prevModalDialog.classList.add("show");
 			prevModalDialog.classList.remove("hide");
-			closeModal();
+			closeModal(document.querySelector(".modal"));
 		}, 2000);
 	}
 }

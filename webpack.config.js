@@ -1,21 +1,26 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: "production", // development || production
 	entry: './src/js/index.js',
 	output: {
 		filename: 'all.js',
-		path: path.resolve(__dirname, 'dist/js/'),
+		path: path.resolve(__dirname, 'dist'),
 	},
-	plugins: [
-		new HtmlWebpackPlugin(
-			{ 
-				template: './src/index.html', 
-				filename: "../index.html",
-				minify: true
+	watch: true,
+	devtool: "source-map",
+	module: {
+		rules: [
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
 			}
-		)
-	],
-	watch: true
+		]
+	}
 };
